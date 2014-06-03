@@ -11,66 +11,66 @@ class PluginArchivelogs extends ServicePlugin
     function getVariables()
     {
         $variables = array(
-            /*T*/'Plugin Name'/*/T*/   => array(
+            lang('Plugin Name')   => array(
                 'type'          => 'hidden',
-                'description'   => /*T*/''/*/T*/,
-                'value'         => /*T*/'Archive Logs'/*/T*/,
+                'description'   => '',
+                'value'         => lang('Archive Logs'),
             ),
-            /*T*/'Enabled'/*/T*/       => array(
+            lang('Enabled')       => array(
                 'type'          => 'yesno',
-                'description'   => /*T*/'Generates a file with an SQL dump of the selected log tables on a periodic basis, and delivers it to any of the locations set below. Then the log tables are erased.'/*/T*/,
+                'description'   => lang('Generates a file with an SQL dump of the selected log tables on a periodic basis, and delivers it to any of the locations set below. Then the log tables are erased.'),
                 'value'         => '0',
             ),
-            /*T*/'Archive events_log Table'/*/T*/       => array(
+            lang('Archive events_log Table')       => array(
                 'type'          => 'yesno',
-                'description'   => /*T*/'Select YES to archive the events_log table, which contains the events logged acording to the setting "general settings->global->Enable Events Logging".'/*/T*/,
+                'description'   => lang('Select YES to archive the events_log table, which contains the events logged acording to the setting "general settings->global->Enable Events Logging".'),
                 'value'         => '0',
             ),
-            /*T*/'Compress files with gzip'/*/T*/ => array(
+            lang('Compress files with gzip') => array(
                 'type'          => 'yesno',
-                'description'   => /*T*/'Only possible if you have the zlib extension in your PHP installation.'/*/T*/,
+                'description'   => lang('Only possible if you have the zlib extension in your PHP installation.'),
                 'value'         => '0',
                 'enableIf'      => 'return extension_loaded(\'zlib\');',
             ),
 
-            /*T*/'Deliver to remote FTP or SFTP account'/*/T*/ => array(
+            lang('Deliver to remote FTP or SFTP account') => array(
                 'type'          => 'text',
-                'description'   => /*T*/'To send the files to a remote FTP or SFTP account enter the host and your credentials in the format <b>ftp://username:password@host.com/subdirectory</b> for FTP<br>or<br><b>sftp://username:password@host.com/subdirectory</b> for SFTP<br>SFTP is only possible if you have the ssh2 extension in your PHP installation'/*/T*/,
+                'description'   => lang('To send the files to a remote FTP or SFTP account enter the host and your credentials in the format <b>ftp://username:password@host.com/subdirectory</b> for FTP<br>or<br><b>sftp://username:password@host.com/subdirectory</b> for SFTP<br>SFTP is only possible if you have the ssh2 extension in your PHP installation'),
                 'value'         => '',
             ),
-            /*T*/'Deliver to local directory'/*/T*/ => array(
+            lang('Deliver to local directory') => array(
                 'type'          => 'text',
-                'description'   => /*T*/'To save the files in a local directory accessible and writable by the web server, enter it\'s full path here.'/*/T*/,
+                'description'   => lang('To save the files in a local directory accessible and writable by the web server, enter it\'s full path here.'),
                 'value'         => '',
             ),
-            /*T*/'Deliver to E-mail address'/*/T*/ => array(
+            lang('Deliver to E-mail address') => array(
                 'type'          => 'textarea',
-                'description'   => /*T*/'To send the files as an E-mail attachment, enter the address here.'/*/T*/,
+                'description'   => lang('To send the files as an E-mail attachment, enter the address here.'),
                 'value'         => '',
             ),
-            /*T*/'Run schedule - Minute'/*/T*/  => array(
+            lang('Run schedule - Minute')  => array(
                 'type'          => 'text',
-                'description'   => /*T*/'Enter number, range, list or steps'/*/T*/,
+                'description'   => lang('Enter number, range, list or steps'),
                 'value'         => '30'
             ),
-            /*T*/'Run schedule - Hour'/*/T*/  => array(
+            lang('Run schedule - Hour')  => array(
                 'type'          => 'text',
-                'description'   => /*T*/'Enter number, range, list or steps'/*/T*/,
+                'description'   => lang('Enter number, range, list or steps'),
                 'value'         => '01',
             ),
-            /*T*/'Run schedule - Day'/*/T*/  => array(
+            lang('Run schedule - Day')  => array(
                 'type'          => 'text',
-                'description'   => /*T*/'Enter number, range, list or steps'/*/T*/,
+                'description'   => lang('Enter number, range, list or steps'),
                 'value'         => '15',
             ),
-            /*T*/'Run schedule - Month'/*/T*/  => array(
+            lang('Run schedule - Month')  => array(
                 'type'          => 'text',
-                'description'   => /*T*/'Enter number, range, list or steps'/*/T*/,
+                'description'   => lang('Enter number, range, list or steps'),
                 'value'         => '*',
             ),
-            /*T*/'Run schedule - Day of the week'/*/T*/  => array(
+            lang('Run schedule - Day of the week')  => array(
                 'type'          => 'text',
-                'description'   => /*T*/'Enter number in range 0-6 (0 is Sunday) or a 3 letter shortcut (e.g. sun)'/*/T*/,
+                'description'   => lang('Enter number in range 0-6 (0 is Sunday) or a 3 letter shortcut (e.g. sun)'),
                 'value'         => '*',
             ),
         );
