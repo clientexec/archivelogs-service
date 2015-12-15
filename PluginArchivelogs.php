@@ -143,7 +143,7 @@ class PluginArchivelogs extends ServicePlugin
             $fields[]=$row1[0];
         }
         $result2 = $this->db->query("SELECT * FROM `$table`");
-        while ($row2 = $result2->fetch(MYSQL_NUM)) {
+        while ($row2 = $result2->fetch(MYSQLI_NUM)) {
             for ($i = 0; $i < count($row2); $i++) {
               $row2[$i] = $this->db->escape_string($row2[$i]);
             }
